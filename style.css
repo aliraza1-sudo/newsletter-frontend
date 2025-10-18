@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  height: 100vh; /* Full screen height */
+  display: grid; /* Enable grid layout */
+  place-items: center; /* Center both vertically and horizontally */
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+}
+.main-container {
+  position: relative; /* allows absolute positioning of children */
+  width: 100%;
+  height: 100vh; /* make it full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  display: flex; /* Enable grid layout */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid white;
+  border-radius: 30px;
+  background-color: white;
+  padding: 10px;
+  max-width: 904px;
+  max-height: 600px;
+  gap: 2.5rem;
+}
+.right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  max-width: 400px;
+}
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: hsl(235, 18%, 26%);
+  margin-bottom: 2rem;
+}
+#description {
+  color: hsl(235, 18%, 26%);
+}
+.item {
+  line-height: 2;
+  list-style-image: url(assets/images/icon-list.svg);
+  color: hsl(235, 18%, 26%);
+}
+.check-list {
+  margin-bottom: 0.5rem;
+}
+p {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(235, 18%, 26%);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#user-email {
+  padding: 20px 24px;
+  border-radius: 10px;
+}
+.error-message {
+  font-size: 15px;
+  font-weight: 400;
+  color: red;
+}
+input[type='submit']:invalid {
+  border-color: hsl(4, 100%, 67%);
+}
+
+.emailHead-errorMessage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#btn {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 24px;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+#btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: 0.3s;
+}
+#btn:active {
+  background-image: linear-gradient(
+    to right,
+    hsl(347, 90%, 55%),
+    hsl(24, 95%, 50%)
+  );
+  border-image: linear-gradient(
+    to right,
+    hsl(347, 90%, 55%),
+    hsl(24, 95%, 50%)
+  );
+  box-shadow: 0 10px 18px rgba(255, 95, 82, 0.5);
+}
+
+/* Success - message */
+.success-message {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  border: 10px solid white;
+  border-radius: 30px;
+  background-color: white;
+  padding: 50px;
+  max-width: 300px;
+  max-height: 350px;
+}
+.success-message button {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 24px;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  width: 300px;
+}
+.success-message h1 {
+  margin-bottom: 1px;
+}
+.success-message p {
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(235, 18%, 26%);
+}
+.success-message button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: 0.3s;
+}
+.success-message button:active {
+  background-image: linear-gradient(
+    to right,
+    hsl(347, 90%, 55%),
+    hsl(24, 95%, 50%)
+  );
+  border-image: linear-gradient(
+    to right,
+    hsl(347, 90%, 55%),
+    hsl(24, 95%, 50%)
+  );
+  box-shadow: 0 10px 18px rgba(255, 95, 82, 0.5);
+}
+.container,
+.success-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
